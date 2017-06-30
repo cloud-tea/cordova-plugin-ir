@@ -1,0 +1,17 @@
+{
+  "name": "ir",
+  "version": "1.0.0",
+  "description": "IR cordova plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "cordova",
+    "ir",
+    "wifi",
+    "iot"
+  ],
+  "author": "zjhiphop@gmail.com",
+  "license": "ISC"
+}

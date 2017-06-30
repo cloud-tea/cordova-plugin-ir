@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-ir" version="0.1.0" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>cordovaIR</name>
+    <js-module name="cordovaIR" src="www/cordovaIR.js">
+        <clobbers target="cordova.plugins.cordovaIR" />
+    </js-module>
+    <platform name="android">
+		<config-file parent="/*" target="res/xml/config.xml">
+			<feature name="cordovaIR">
+				<param name="android-package" value="cordovaIR"/>
+			</feature>
+		</config-file>
+		<config-file parent="/*" target="AndroidManifest.xml">
+		    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+		    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+		    <uses-permission android:name="android.permission.INTERNET" />
+			<uses-permission android:name="android.permission.TRANSMIT_IR"/>
+			<uses-permission android:name="android.permission.VIBRATE"/>
+		</config-file>
+		
+		<source-file src="src/android/IRManager.java" target-dir="src/CordovaIR"/>
+		<source-file src="src/android/TiqiaaCommonSDK.jar" target-dir="libs/" />
+		<framework src="com.android.support:support-v4:23.3.0+" />
+	</platform>
+	<!-- <platform name="ios">
+		<config-file parent="/*" target="config.xml">
+			<feature name="cordovaIR">
+				<param name="ios-package" value="cordovaIR"/>
+    			<param name="onload" value="true" />
+			</feature>
+		</config-file>
+		<source-file src="src/ios/IRManager.m"/>
+		<source-file src="src/ios/libsmartlinklib_7x.a" framework="true" />
+
+		<header-file src="src/ios/HFSmartLink.h"></header-file>
+		<header-file src="src/ios/HFSmartLinkDeviceInfo.h"></header-file>
+		<header-file src="src/ios/smartlinklib_7x.h"></header-file>
+	</platform> -->
+</plugin>
