@@ -1,16 +1,16 @@
 {
-    "cordova-plugin-ir": {
-        "source": {
-            "type": "local",
-            "path": "/Users/jade/Documents/project/workspace/freelance/bolang/code/cordovaIR/demo/node_modules/ir"
-        },
-        "is_top_level": true,
-        "variables": {}
-    },
     "cordova-plugin-whitelist": {
         "source": {
             "type": "registry",
             "id": "cordova-plugin-whitelist@1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-ir": {
+        "source": {
+            "type": "local",
+            "path": "/Users/jade/Documents/project/workspace/freelance/bolang/code/cordovaIR/demo/node_modules/ir"
         },
         "is_top_level": true,
         "variables": {}

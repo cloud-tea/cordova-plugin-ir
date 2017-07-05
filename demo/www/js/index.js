@@ -28,6 +28,13 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
+        console.log(Object.keys(cordova.plugins.cordovaIR));
+
+        cordova.plugins.cordovaIR.getBrandList(null, function(result) {
+            console.log(result);
+        }, function(error) {
+            alert(JSON.stringify(error));
+        });
     },
 
     // Update DOM on a Received Event

@@ -6,8 +6,8 @@
     </js-module>
     <platform name="android">
 		<config-file parent="/*" target="res/xml/config.xml">
-			<feature name="cordovaIR">
-				<param name="android-package" value="cordovaIR"/>
+			<feature name="CordovaIR">
+				<param name="android-package" value="CordovaIR"/>
 			</feature>
 		</config-file>
 		<config-file parent="/*" target="AndroidManifest.xml">
@@ -19,13 +19,14 @@
 		</config-file>
 		
 		<source-file src="src/android/IRManager.java" target-dir="src/CordovaIR"/>
+		<source-file src="src/android/utils/AppliantTypeUtils.java" target-dir="src/CordovaIR/utils"/>
 		<source-file src="src/android/TiqiaaCommonSDK.jar" target-dir="libs/" />
 		<framework src="com.android.support:support-v4:23.3.0+" />
 	</platform>
 	<!-- <platform name="ios">
 		<config-file parent="/*" target="config.xml">
-			<feature name="cordovaIR">
-				<param name="ios-package" value="cordovaIR"/>
+			<feature name="CordovaIR">
+				<param name="ios-package" value="CordovaIR"/>
     			<param name="onload" value="true" />
 			</feature>
 		</config-file>
