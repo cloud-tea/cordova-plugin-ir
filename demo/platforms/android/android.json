@@ -13,7 +13,7 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"CordovaIR\"><param name=\"android-package\" value=\"CordovaIR\" /></feature>",
+                            "xml": "<feature name=\"IRManager\"><param name=\"android-package\" value=\"CordovaIR.IRManager\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -58,11 +58,11 @@
     "dependent_plugins": {},
     "modules": [
         {
-            "id": "cordova-plugin-ir.cordovaIR",
+            "id": "cordova-plugin-ir.CordovaIR",
             "file": "plugins/cordova-plugin-ir/www/cordovaIR.js",
             "pluginId": "cordova-plugin-ir",
             "clobbers": [
-                "cordova.plugins.cordovaIR"
+                "cordova.plugins.ir"
             ]
         }
     ],

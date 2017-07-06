@@ -120,16 +120,16 @@ public class CordovaPlugin {
     /**
      * Executes the request.
      *
-     * This method is called from the WebView thread. To do a non-trivial amount of work, use:
-     *     cordova.getThreadPool().execute(runnable);
+             * This method is called from the WebView thread. To do a non-trivial amount of work, use:
+            *     cordova.getThreadPool().execute(runnable);
      *
-     * To run on the UI thread, use:
-     *     cordova.getActivity().runOnUiThread(runnable);
+             * To run on the UI thread, use:
+            *     cordova.getActivity().runOnUiThread(runnable);
      *
-     * @param action          The action to execute.
+             * @param action          The action to execute.
      * @param args            The exec() arguments, wrapped with some Cordova helpers.
-     * @param callbackContext The callback context used when calling back into JavaScript.
-     * @return                Whether the action was valid.
+            * @param callbackContext The callback context used when calling back into JavaScript.
+            * @return                Whether the action was valid.
      */
     public boolean execute(String action, CordovaArgs args, CallbackContext callbackContext) throws JSONException {
         return false;

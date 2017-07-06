@@ -24,6 +24,6 @@
     </platform>
     <engine name="android" spec="^6.2.3" />
     <engine name="ios" spec="^4.4.0" />
-    <plugin name="cordova-plugin-whitelist" spec="^1.3.2" />
     <plugin name="cordova-plugin-ir" spec="../ir" />
+    <plugin name="cordova-plugin-whitelist" spec="^1.3.2" />
 </widget>

@@ -17,11 +17,11 @@
     "dependent_plugins": {},
     "modules": [
         {
-            "id": "cordova-plugin-ir.cordovaIR",
+            "id": "cordova-plugin-ir.CordovaIR",
             "file": "plugins/cordova-plugin-ir/www/cordovaIR.js",
             "pluginId": "cordova-plugin-ir",
             "clobbers": [
-                "cordova.plugins.cordovaIR"
+                "cordova.plugins.ir"
             ]
         }
     ],

@@ -30,7 +30,7 @@ buildscript {
     // http://tools.android.com/tech-docs/new-build-system/version-compatibility
     // and https://issues.apache.org/jira/browse/CB-8143
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.3'
+        classpath 'com.android.tools.build:gradle:2.3.3'
     }
 }
 
@@ -151,6 +151,12 @@ task cdvPrintProps << {
 
 android {
     signingConfigs {
+        debug {
+            keyAlias 'test'
+            keyPassword 'bolang'
+            storeFile file('test.jks')
+            storePassword 'bolang'
+        }
     }
     sourceSets {
         main {
@@ -170,6 +176,11 @@ android {
 
         if (cdvMinSdkVersion != null) {
             minSdkVersion cdvMinSdkVersion
+        }
+
+        ndk {
+            // 设置支持的 SO 库构架，注意这里要根据你的实际情况来设置
+            abiFilters 'armeabi'// 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64', 'mips', 'mips64'
         }
     }
     lintOptions {

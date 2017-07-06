@@ -28,9 +28,9 @@ var app = {
     // 'pause', 'resume', etc.
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
-        console.log(Object.keys(cordova.plugins.cordovaIR));
+        console.log(Object.keys(cordova.plugins.ir));
 
-        cordova.plugins.cordovaIR.getBrandList(null, function(result) {
+        cordova.plugins.ir.getBrandList(null, function(result) {
             console.log(result);
         }, function(error) {
             alert(JSON.stringify(error));

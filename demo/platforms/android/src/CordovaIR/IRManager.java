@@ -33,6 +33,7 @@ import com.alibaba.fastjson.JSON;
 import com.tiqiaa.client.IRemoteClient;
 import com.tiqiaa.client.impl.RemoteClient;
 import com.tiqiaa.constant.ApplianceType;
+import com.tiqiaa.icontrol.util.TiqiaaService;
 import com.tiqiaa.remote.entity.Brand;
 
 import java.util.ArrayList;
@@ -54,11 +55,20 @@ public class IRManager extends CordovaPlugin implements IRemoteClient.CallbackOn
     private static final String ADD_REMOTE = "ADD_REMOTE";
     private static final String GET_ALL_APPLICANCE = "GET_ALL_APPLICANCE";
 
+    // todo: 需要加密上线
+    public static final byte[] AppKey = {68, -75, 68, -102, 75, 18, 78, -39, 30, -112, -114, 71, 23, 104, 61, -95,84, -78, -84, 11, 123, 78, 103, 118, 76, -80, 99, 71, -59, 71, -64, -30,-75, -67, -67, -115, -16, 38, -126, 91, 15, -84, -127, -43, -71, 28, 126, -122,88, 2, 63, 114, -80, 111, 2, -38, 6, -54, -64, -31, 38, -44, 39, 106,0, 86, -23, 123, 70, 5, -111, 70, 96, -109, 18, 10, -31, -102, 86, -7,-72, -39, 45, -119, 3, -117, 43, -124, -90, -62, 124, 51, 19, -12, 36, -69,-11, 51, -108, 113, 68, 38, 104, -46, 83, 66, 7, -37, 49, -45, -4, -92,-58, 0, 81, -37, 108, 95, 93, -86, 85, -95, -80, 76, -90, 104, -5, 16,82, -87, 54, 61, 15, -23, -8, -18, 63, -115, -112, -62, -47, 87, -36, -67};
+
     @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webview) {
         super.initialize(cordova, webView);
 
         activity = cordova.getActivity();
+    }
+
+    @Override
+    public void onStart() {
+        TiqiaaService.setLocalServer(false);
+        TiqiaaService.init(activity, AppKey);
     }
 
 

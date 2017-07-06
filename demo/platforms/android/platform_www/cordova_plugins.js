@@ -1,11 +1,11 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
 module.exports = [
     {
-        "id": "cordova-plugin-ir.cordovaIR",
+        "id": "cordova-plugin-ir.CordovaIR",
         "file": "plugins/cordova-plugin-ir/www/cordovaIR.js",
         "pluginId": "cordova-plugin-ir",
         "clobbers": [
-            "cordova.plugins.cordovaIR"
+            "cordova.plugins.ir"
         ]
     }
 ];
