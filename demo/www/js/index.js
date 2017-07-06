@@ -29,12 +29,37 @@ var app = {
     onDeviceReady: function() {
         this.receivedEvent('deviceready');
         console.log(Object.keys(cordova.plugins.ir));
+        let $log = document.getElementById('log');
 
-        cordova.plugins.ir.getBrandList(null, function(result) {
-            console.log(result);
-        }, function(error) {
-            alert(JSON.stringify(error));
-        });
+        document.getElementById('get-brand').addEventListener('click', function() {
+            cordova.plugins.ir.getBrandList(null, function(result) {
+                console.log(result);
+                $log.appendChild(result);
+            }, function(error) {
+                alert(JSON.stringify(error));
+            });
+        }, false);
+
+        document.getElementById('get-apps').addEventListener('click', function() {
+            cordova.plugins.ir.getApplianceList(null, function(result) {
+                console.log(result);
+                $log.appendChild(result);
+            }, function(error) {
+                alert(JSON.stringify(error));
+            });
+        }, false);
+
+        document.getElementById('search-remote').addEventListener('click', function() {
+            let key = document.getElementById('remote-key').value;
+            if(!key) return alert('key is empty!!');
+
+            cordova.plugins.ir.searchRemote(key, function(result) {
+                console.log(result);
+                $log.appendChild(result);
+            }, function(error) {
+                alert(JSON.stringify(error));
+            });
+        }, false);
     },
 
     // Update DOM on a Received Event
