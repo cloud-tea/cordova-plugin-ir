@@ -28,6 +28,7 @@
             * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
+        <meta charset="utf-8" />
         <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
@@ -43,11 +44,12 @@
                 <p class="event received">Device is Ready</p>
             </div>
             <button id="get-brand">get BrandList</button><br>
+            <button id="get-air-brand">get air BrandList</button><br>
             <button id="get-apps">get device type</button><br>
             <input type="text" name="remote-key" id="remote-key" placeholder="input key word"><br>
-            <button id="search-remote">search remote</button><br>
-            <button id="download-remote">download remote</button>
-            <p id=log></p>
+                <button id="search-remote">search remote</button><br>
+                <button id="download-remote">download remote</button>
+                <p id="log"></p>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>

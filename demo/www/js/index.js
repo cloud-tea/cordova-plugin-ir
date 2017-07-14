@@ -18,61 +18,70 @@
  */
 var app = {
     // Application Constructor
-    initialize: function() {
-        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
-    },
-
+initialize: function() {
+    document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
+},
+    
     // deviceready Event Handler
     //
     // Bind any cordova events here. Common events are:
     // 'pause', 'resume', etc.
-    onDeviceReady: function() {
-        this.receivedEvent('deviceready');
-        console.log(Object.keys(cordova.plugins.ir));
-        let $log = document.getElementById('log');
-
-        document.getElementById('get-brand').addEventListener('click', function() {
-            cordova.plugins.ir.getBrandList(null, function(result) {
-                console.log(result);
-                $log.appendChild(result);
-            }, function(error) {
-                alert(JSON.stringify(error));
-            });
-        }, false);
-
-        document.getElementById('get-apps').addEventListener('click', function() {
-            cordova.plugins.ir.getApplianceList(null, function(result) {
-                console.log(result);
-                $log.appendChild(result);
-            }, function(error) {
-                alert(JSON.stringify(error));
-            });
-        }, false);
-
-        document.getElementById('search-remote').addEventListener('click', function() {
-            let key = document.getElementById('remote-key').value;
-            if(!key) return alert('key is empty!!');
-
-            cordova.plugins.ir.searchRemote(key, function(result) {
-                console.log(result);
-                $log.appendChild(result);
-            }, function(error) {
-                alert(JSON.stringify(error));
-            });
-        }, false);
-    },
-
+onDeviceReady: function() {
+    this.receivedEvent('deviceready');
+    console.log(Object.keys(cordova.plugins.ir));
+    let $log = document.getElementById('log');
+    
+    document.getElementById('get-air-brand').addEventListener('click', function() {
+                                                          cordova.plugins.ir.getAIRBrandList('海尔', function(result) {
+                                                                                             console.log(result);
+                                                                                             $log.append(result);
+                                                                                             }, function(error) {
+                                                                                             alert(JSON.stringify(error));
+                                                                                             });
+                                                          }, false);
+    
+    document.getElementById('get-brand').addEventListener('click', function() {
+                                                          cordova.plugins.ir.getBrandList(null, function(result) {
+                                                                                          console.log(result);
+                                                                                          $log.append(result);
+                                                                                          }, function(error) {
+                                                                                          alert(JSON.stringify(error));
+                                                                                          });
+                                                          }, false);
+    
+    document.getElementById('get-apps').addEventListener('click', function() {
+                                                         cordova.plugins.ir.getApplianceList(null, function(result) {
+                                                                                             console.log(result);
+                                                                                             $log.append(result);
+                                                                                             }, function(error) {
+                                                                                             alert(JSON.stringify(error));
+                                                                                             });
+                                                         }, false);
+    
+    document.getElementById('search-remote').addEventListener('click', function() {
+                                                              let key = document.getElementById('remote-key').value;
+                                                              if(!key) return alert('key is empty!!');
+                                                              
+                                                              cordova.plugins.ir.searchRemote(key, function(result) {
+                                                                                              console.log(result);
+                                                                                              $log.append(result);
+                                                                                              }, function(error) {
+                                                                                              alert(JSON.stringify(error));
+                                                                                              });
+                                                              }, false);
+},
+    
     // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
-
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
-    }
+receivedEvent: function(id) {
+    var parentElement = document.getElementById(id);
+    var listeningElement = parentElement.querySelector('.listening');
+    var receivedElement = parentElement.querySelector('.received');
+    
+    listeningElement.setAttribute('style', 'display:none;');
+    receivedElement.setAttribute('style', 'display:block;');
+    
+    console.log('Received Event: ' + id);
+}
 };
 
 app.initialize();
