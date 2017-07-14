@@ -4,14 +4,35 @@
         "uninstalled": []
     },
     "config_munge": {
-        "files": {}
+        "files": {
+            "config.xml": {
+                "parents": {
+                    "/*": [
+                        {
+                            "xml": "<feature name=\"IRManager\"><param name=\"ios-package\" value=\"IRManager\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "*-Info.plist": {
+                "parents": {
+                    "NSAppTransportSecurity": [
+                        {
+                            "xml": "<dict><key>NSAllowsArbitraryLoads</key><true /></dict>",
+                            "count": 1
+                        }
+                    ]
+                }
+            }
+        }
     },
     "installed_plugins": {
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "io.cordova.hellocordova"
         },
         "cordova-plugin-ir": {
-            "PACKAGE_NAME": "io.cordova.hellocordova"
+            "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
         }
     },
     "dependent_plugins": {},

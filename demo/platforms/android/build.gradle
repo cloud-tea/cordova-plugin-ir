@@ -240,6 +240,7 @@ android {
                 // And these must be set to non-empty in order to have the signing step added to the task graph.
                 storePassword = "bolang"
             }
+
         }
         buildTypes {
             release {

@@ -5,30 +5,42 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0207DA571B56EA530066E2B4 /* Images.xcassets */; };
+		0717274C1F18713B00FD3D90 /* IRSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 0717274B1F18713B00FD3D90 /* IRSender.m */; };
+		071F60311F14672300CADD85 /* libtiqiaasdk.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 071F60301F14672300CADD85 /* libtiqiaasdk.a */; };
+		071F60331F1477B000CADD85 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 071F60321F1477B000CADD85 /* libsqlite3.tbd */; };
+		071F60361F147B0400CADD85 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 071F60351F147B0400CADD85 /* libz.tbd */; };
 		1D3623260D0F684500981E51 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3623250D0F684500981E51 /* AppDelegate.m */; };
 		1D60589B0D05DD56006BFB54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; };
 		301BF552109A68D80062928A /* libCordova.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 301BF535109A57CC0062928A /* libCordova.a */; };
 		302D95F114D2391D003F00A1 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 302D95EF14D2391D003F00A1 /* MainViewController.m */; };
 		302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 302D95F014D2391D003F00A1 /* MainViewController.xib */; };
-		3047A5121AB8059700498E2A /* build-debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A50F1AB8059700498E2A /* build-debug.xcconfig */; };
-		3047A5131AB8059700498E2A /* build-release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A5101AB8059700498E2A /* build-release.xcconfig */; };
-		3047A5141AB8059700498E2A /* build.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3047A5111AB8059700498E2A /* build.xcconfig */; };
 		6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */; };
+		72F51452A5454579AA8D8CAC /* IRManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB3BB69F5834D90AE6F73DF /* IRManager.m */; settings = {COMPILER_FLAGS = "-Idemo/Plugins/tiqiaasdk"; }; };
+		7DC269F496F24A79A2AD120F /* tiqiaasdk in Sources */ = {isa = PBXBuildFile; fileRef = 558438434AB04720A4AAD837 /* tiqiaasdk */; };
+		B6789FE18CE246A89C1AEB4F /* AFNetworking in Sources */ = {isa = PBXBuildFile; fileRef = E424D5BB906C4FF0AB87C247 /* AFNetworking */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		071F601A1F1361A500CADD85 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 301BF52D109A57CC0062928A /* CordovaLib/CordovaLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C0C01EB21E3911D50056E6CB;
+			remoteInfo = Cordova;
+		};
 		301BF534109A57CC0062928A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */;
+			containerPortal = 301BF52D109A57CC0062928A /* CordovaLib/CordovaLib.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = CordovaLib;
 		};
 		301BF550109A68C00062928A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */;
+			containerPortal = 301BF52D109A57CC0062928A /* CordovaLib/CordovaLib.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = CordovaLib;
@@ -36,26 +48,36 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0207DA571B56EA530066E2B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "HelloCordova/Images.xcassets"; sourceTree = SOURCE_ROOT; };
+		0207DA571B56EA530066E2B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = HelloCordova/Images.xcassets; sourceTree = SOURCE_ROOT; };
+		0717274A1F18713B00FD3D90 /* IRSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IRSender.h; path = "cordova-plugin-ir/IRSender.h"; sourceTree = "<group>"; };
+		0717274B1F18713B00FD3D90 /* IRSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IRSender.m; path = "cordova-plugin-ir/IRSender.m"; sourceTree = "<group>"; };
+		071F60301F14672300CADD85 /* libtiqiaasdk.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libtiqiaasdk.a; path = "HelloCordova/Plugins/cordova-plugin-ir/tiqiaasdk/libtiqiaasdk.a"; sourceTree = "<group>"; };
+		071F60321F1477B000CADD85 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		071F60351F147B0400CADD85 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		10C79745F3464C8CBD814DC9 /* libtiqiaasdk.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; name = libtiqiaasdk.a; path = "HelloCordova/Plugins/cordova-plugin-ir/libtiqiaasdk.a"; sourceTree = "<group>"; };
 		1D3623240D0F684500981E51 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1D3623250D0F684500981E51 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1D6058910D05DD3D006BFB54 /* HelloCordova.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HelloCordova.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* HelloCordova.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloCordova.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = CordovaLib/CordovaLib.xcodeproj; sourceTree = "<group>"; };
+		301BF52D109A57CC0062928A /* CordovaLib/CordovaLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = CordovaLib/CordovaLib.xcodeproj; sourceTree = "<group>"; };
 		301BF56E109A69640062928A /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; path = www; sourceTree = SOURCE_ROOT; };
 		302D95EE14D2391D003F00A1 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		302D95EF14D2391D003F00A1 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		302D95F014D2391D003F00A1 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
-		3047A50F1AB8059700498E2A /* build-debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "build-debug.xcconfig"; path = cordova/build-debug.xcconfig; sourceTree = SOURCE_ROOT; };
-		3047A5101AB8059700498E2A /* build-release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "build-release.xcconfig"; path = cordova/build-release.xcconfig; sourceTree = SOURCE_ROOT; };
+		3047A50F1AB8059700498E2A /* build-debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "build-debug.xcconfig"; path = "cordova/build-debug.xcconfig"; sourceTree = SOURCE_ROOT; };
+		3047A5101AB8059700498E2A /* build-release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "build-release.xcconfig"; path = "cordova/build-release.xcconfig"; sourceTree = SOURCE_ROOT; };
 		3047A5111AB8059700498E2A /* build.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = build.xcconfig; path = cordova/build.xcconfig; sourceTree = SOURCE_ROOT; };
 		32CA4F630368D1EE00C91783 /* HelloCordova-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HelloCordova-Prefix.pch"; sourceTree = "<group>"; };
-		6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CDVLaunchScreen.storyboard; path = "HelloCordova/CDVLaunchScreen.storyboard"; sourceTree = SOURCE_ROOT; };
+		558438434AB04720A4AAD837 /* tiqiaasdk */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = tiqiaasdk; path = "cordova-plugin-ir/tiqiaasdk"; sourceTree = "<group>"; };
+		6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = CDVLaunchScreen.storyboard; path = HelloCordova/CDVLaunchScreen.storyboard; sourceTree = SOURCE_ROOT; };
 		8D1107310486CEB800E47090 /* HelloCordova-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "HelloCordova-Info.plist"; path = "HelloCordova/HelloCordova-Info.plist"; plistStructureDefinitionIdentifier = "com.apple.xcode.plist.structure-definition.iphone.info-plist"; sourceTree = SOURCE_ROOT; };
+		9CB3BB69F5834D90AE6F73DF /* IRManager.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = IRManager.m; path = "cordova-plugin-ir/IRManager.m"; sourceTree = "<group>"; };
+		E05592E4D7854E11955BBB57 /* libz.1.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.tbd; path = usr/lib/libz.1.tbd; sourceTree = SDKROOT; };
+		E424D5BB906C4FF0AB87C247 /* AFNetworking */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AFNetworking; path = "cordova-plugin-ir/AFNetworking"; sourceTree = "<group>"; };
 		EB87FDF31871DA8E0020F90C /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../../www; sourceTree = "<group>"; };
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
-		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = "HelloCordova/config.xml"; sourceTree = "<group>"; };
-		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Bridging-Header.h"; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = HelloCordova/config.xml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +85,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				071F60361F147B0400CADD85 /* libz.tbd in Frameworks */,
+				071F60331F1477B000CADD85 /* libsqlite3.tbd in Frameworks */,
+				071F60311F14672300CADD85 /* libtiqiaasdk.a in Frameworks */,
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,7 +105,7 @@
 				1D3623250D0F684500981E51 /* AppDelegate.m */,
 			);
 			name = Classes;
-			path = "HelloCordova/Classes";
+			path = HelloCordova/Classes;
 			sourceTree = SOURCE_ROOT;
 		};
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
@@ -97,7 +122,7 @@
 				EB87FDF41871DAF40020F90C /* config.xml */,
 				EB87FDF31871DA8E0020F90C /* www */,
 				EB87FDF11871DA420020F90C /* Staging */,
-				301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */,
+				301BF52D109A57CC0062928A /* CordovaLib/CordovaLib.xcodeproj */,
 				080E96DDFE201D6D7F000001 /* Classes */,
 				307C750510C5A3420062BCA9 /* Plugins */,
 				29B97315FDCFA39411CA2CEA /* Other Sources */,
@@ -116,7 +141,7 @@
 				ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */,
 			);
 			name = "Other Sources";
-			path = "HelloCordova";
+			path = HelloCordova;
 			sourceTree = "<group>";
 		};
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
@@ -128,12 +153,17 @@
 				6AFF5BF81D6E424B00AB3073 /* CDVLaunchScreen.storyboard */,
 			);
 			name = Resources;
-			path = "HelloCordova/Resources";
+			path = HelloCordova/Resources;
 			sourceTree = "<group>";
 		};
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				071F60351F147B0400CADD85 /* libz.tbd */,
+				071F60321F1477B000CADD85 /* libsqlite3.tbd */,
+				071F60301F14672300CADD85 /* libtiqiaasdk.a */,
+				10C79745F3464C8CBD814DC9 /* libtiqiaasdk.a */,
+				E05592E4D7854E11955BBB57 /* libz.1.tbd */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -142,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				301BF535109A57CC0062928A /* libCordova.a */,
+				071F601B1F1361A500CADD85 /* Cordova.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -159,9 +190,14 @@
 		307C750510C5A3420062BCA9 /* Plugins */ = {
 			isa = PBXGroup;
 			children = (
+				0717274A1F18713B00FD3D90 /* IRSender.h */,
+				0717274B1F18713B00FD3D90 /* IRSender.m */,
+				9CB3BB69F5834D90AE6F73DF /* IRManager.m */,
+				558438434AB04720A4AAD837 /* tiqiaasdk */,
+				E424D5BB906C4FF0AB87C247 /* AFNetworking */,
 			);
 			name = Plugins;
-			path = "HelloCordova/Plugins";
+			path = HelloCordova/Plugins;
 			sourceTree = SOURCE_ROOT;
 		};
 		EB87FDF11871DA420020F90C /* Staging */ = {
@@ -190,8 +226,8 @@
 			dependencies = (
 				301BF551109A68C00062928A /* PBXTargetDependency */,
 			);
-			name = "HelloCordova";
-			productName = "HelloCordova";
+			name = HelloCordova;
+			productName = HelloCordova;
 			productReference = 1D6058910D05DD3D006BFB54 /* HelloCordova.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -202,17 +238,26 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 510;
+				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						DevelopmentTeam = 8U9ZMG46K2;
+						ProvisioningStyle = Manual;
+					};
+				};
 			};
-			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "__NON-CLI__" */;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "HelloCordova" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
 			projectDirPath = "";
 			projectReferences = (
 				{
 					ProductGroup = 301BF52E109A57CC0062928A /* Products */;
-					ProjectRef = 301BF52D109A57CC0062928A /* CordovaLib.xcodeproj */;
+					ProjectRef = 301BF52D109A57CC0062928A /* CordovaLib/CordovaLib.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -223,6 +268,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		071F601B1F1361A500CADD85 /* Cordova.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Cordova.framework;
+			remoteRef = 071F601A1F1361A500CADD85 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		301BF535109A57CC0062928A /* libCordova.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -271,6 +323,10 @@
 				1D60589B0D05DD56006BFB54 /* main.m in Sources */,
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
+				72F51452A5454579AA8D8CAC /* IRManager.m in Sources */,
+				7DC269F496F24A79A2AD120F /* tiqiaasdk in Sources */,
+				B6789FE18CE246A89C1AEB4F /* AFNetworking in Sources */,
+				0717274C1F18713B00FD3D90 /* IRSender.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +350,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 8U9ZMG46K2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"HelloCordova/Plugins/cordova-plugin-afnetworking\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -304,8 +366,18 @@
 				INFOPLIST_FILE = "HelloCordova/HelloCordova-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HelloCordova/Plugins/cordova-plugin-ir/tiqiaasdk",
+					"\"$(SRCROOT)/HelloCordova/Plugins/cordova-plugin-ir\"",
+					"\"$(SRCROOT)/HelloCordova/Plugins/cordova-plugin-ir\"",
+					"\"$(SRCROOT)/HelloCordova/Plugins/cordova-plugin-ir\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.bolang.znwk;
+				PRODUCT_NAME = HelloCordova;
+				PROVISIONING_PROFILE = "58bf136c-cd65-40a7-98d1-1d67485d26b1";
+				PROVISIONING_PROFILE_SPECIFIER = "智能温控开发描述文件";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				PRODUCT_NAME = "HelloCordova";
 			};
 			name = Debug;
 		};
@@ -318,7 +390,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = 8U9ZMG46K2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"HelloCordova/Plugins/cordova-plugin-afnetworking\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "HelloCordova/HelloCordova-Prefix.pch";
 				GCC_THUMB_SUPPORT = NO;
@@ -326,8 +404,18 @@
 				INFOPLIST_FILE = "HelloCordova/HelloCordova-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HelloCordova/Plugins/cordova-plugin-ir/tiqiaasdk",
+					"\"$(SRCROOT)/HelloCordova/Plugins/cordova-plugin-ir\"",
+					"\"$(SRCROOT)/HelloCordova/Plugins/cordova-plugin-ir\"",
+					"\"$(SRCROOT)/HelloCordova/Plugins/cordova-plugin-ir\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = cn.bolang.znwk;
+				PRODUCT_NAME = HelloCordova;
+				PROVISIONING_PROFILE = "56b83836-6b07-4361-8910-01e896b47b5b";
+				PROVISIONING_PROFILE_SPECIFIER = "智能温控发布描述文件";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				PRODUCT_NAME = "HelloCordova";
 			};
 			name = Release;
 		};
@@ -394,7 +482,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "__NON-CLI__" */ = {
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "HelloCordova" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF4F08A954540054247B /* Debug */,

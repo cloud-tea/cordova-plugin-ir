@@ -24,18 +24,26 @@
 		<source-file src="src/android/TiqiaaCommonSDK.jar" target-dir="libs/" />
 		<framework src="com.android.support:support-v4:23.3.0+" />
 	</platform>
-	<!-- <platform name="ios">
+	<platform name="ios">
 		<config-file parent="/*" target="config.xml">
-			<feature name="CordovaIR">
-				<param name="ios-package" value="CordovaIR"/>
+			<feature name="IRManager">
+				<param name="ios-package" value="IRManager"/>
     			<param name="onload" value="true" />
 			</feature>
 		</config-file>
-		<source-file src="src/ios/IRManager.m"/>
-		<source-file src="src/ios/libsmartlinklib_7x.a" framework="true" />
 
-		<header-file src="src/ios/HFSmartLink.h"></header-file>
-		<header-file src="src/ios/HFSmartLinkDeviceInfo.h"></header-file>
-		<header-file src="src/ios/smartlinklib_7x.h"></header-file>
-	</platform> -->
+		<config-file target="*-Info.plist" parent="NSAppTransportSecurity">
+		    <dict>
+		        <key>NSAllowsArbitraryLoads</key>
+		        <true/>
+		    </dict> 
+		</config-file>
+
+		<source-file src="src/ios/IRManager.m" compiler-flags="-Idemo/Plugins/tiqiaasdk"/>
+		<source-file src="src/ios/tiqiaasdk"/>
+		<source-file src="src/ios/AFNetworking"/>
+		<source-file src="src/ios/tiqiaasdk/libtiqiaasdk.a" framework="true" />
+		<source-file src="src/ios/libsqlite3.tbd" framework="true" />
+		<source-file src="src/ios/libz.1.tbd" framework="true" />
+	</platform>
 </plugin>

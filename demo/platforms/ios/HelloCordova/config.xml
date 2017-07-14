@@ -45,4 +45,8 @@
     <preference name="PageLength" value="0" />
     <preference name="PaginationBreakingMode" value="page" />
     <preference name="PaginationMode" value="unpaginated" />
+    <feature name="IRManager">
+        <param name="ios-package" value="IRManager" />
+        <param name="onload" value="true" />
+    </feature>
 </widget>

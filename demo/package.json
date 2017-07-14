@@ -13,8 +13,7 @@
         "cordova-android": "^6.2.3",
         "cordova-ios": "^4.4.0",
         "cordova-plugin-whitelist": "^1.3.2",
-        "ir": "file:../ir",
-        "cordova-plugin-ir": "../ir"
+        "ir": "file:../ir"
     },
     "cordova": {
         "plugins": {
