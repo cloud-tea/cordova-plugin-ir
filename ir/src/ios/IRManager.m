@@ -153,6 +153,33 @@
 
 
 /*
+    添加远程遥控器
+ */
+- (void) ADD_REMOTE:(CDVInvokedUrlCommand *)command
+{
+    self.page.keyword = [command argumentAtIndex:0];
+    BOOL isOffical = [[command argumentAtIndex:1] boolValue];
+    
+    id weak = self;
+    
+    if(isOffical) {
+        [[TJRemoteClient sharedClient] searchOfficial:self.page callback:^(TJWebErrorCode errcode, NSMutableArray<TJRemote *> *remoteList) {
+            NSLog(@"searchOfficial: %d, %d", errcode, (int)remoteList.count);
+            
+            [weak onSearchRemoteDone:remoteList withCommand:command];
+        }];
+    } else {
+        [[TJRemoteClient sharedClient] searchDiy:self.page callback:^(TJWebErrorCode errcode, NSMutableArray<TJRemote *> *remoteList) {
+            NSLog(@"searchDiy: %d, %d", errcode, (int)remoteList.count);
+            
+            [weak onSearchRemoteDone:remoteList withCommand:command];
+        }];
+    }
+    
+}
+
+
+/*
     根据关键字搜索远程遥控器
  */
 - (void) SEARCH_REMOTE:(CDVInvokedUrlCommand *)command

@@ -38,8 +38,10 @@
 		        <true/>
 		    </dict> 
 		</config-file>
-
+		
+		<header-file src="src/ios/IRSender.h"/>
 		<source-file src="src/ios/IRManager.m" compiler-flags="-Idemo/Plugins/tiqiaasdk"/>
+		<source-file src="src/ios/IRSender.m"/>
 		<source-file src="src/ios/tiqiaasdk"/>
 		<source-file src="src/ios/AFNetworking"/>
 		<source-file src="src/ios/tiqiaasdk/libtiqiaasdk.a" framework="true" />
