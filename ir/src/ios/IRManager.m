@@ -260,7 +260,7 @@
             // 方案1：按电器类型和品牌ID自动匹配
             // 方案2：按电器类型和品牌ID搜索
             // 方案3：提示找不到遥控器，反馈缺失遥控器型号
-            //		[[TJRemoteClient sharedClient] missModel:page.appliance_type brandId:page.brand_id model:model];
+            //      [[TJRemoteClient sharedClient] missModel:page.appliance_type brandId:page.brand_id model:model];
             NSLog(@"No remotes!");
         }
         
