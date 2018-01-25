@@ -17,20 +17,10 @@
  under the License.
  */
 
-#import <UIKit/UIKit.h>
-#import "CDVCommandDelegate.h"
+#import "CDVPlugin.h"
 
-@class CDVViewController;
-@class CDVCommandQueue;
+@interface CDVLogger : CDVPlugin
 
-@interface CDVCommandDelegateImpl : NSObject <CDVCommandDelegate>{
-    @private
-    __weak CDVViewController* _viewController;
-    NSRegularExpression* _callbackIdPattern;
-    @protected
-    __weak CDVCommandQueue* _commandQueue;
-    BOOL _delayResponses;
-}
-- (id)initWithViewController:(CDVViewController*)viewController;
-- (void)flushCommandQueueWithDelayedJs;
+- (void)logLevel:(CDVInvokedUrlCommand*)command;
+
 @end

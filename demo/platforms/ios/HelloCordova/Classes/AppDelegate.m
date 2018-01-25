@@ -27,17 +27,11 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
-#import "../Plugins/cordova-plugin-ir/tiqiaasdk/tiqiaasdk.h"
-
-static const uint8_t appKey[] = {243, 249, 51, 188, 227, 62, 233, 176, 152, 8, 52, 66, 226, 188, 174, 255,181, 248, 12, 219, 222, 231, 246, 190, 137, 77, 69, 141, 76, 195, 152, 151,185, 134, 109, 154, 174, 164, 241, 24, 159, 143, 25, 51, 210, 64, 209, 91,23, 37, 197, 176, 143, 58, 65, 175, 10, 206, 0, 7, 111, 13, 253, 9,123, 178, 57, 115, 207, 97, 112, 70, 58, 236, 63, 191, 49, 239, 171, 77,88, 185, 40, 254, 122, 77, 32, 85, 19, 73, 112, 15, 174, 10, 115, 5,129, 153, 67, 147, 63, 207, 178, 34, 52, 190, 248, 250, 0, 133, 245, 88,169, 14, 188, 83, 231, 229, 178, 122, 156, 60, 161, 39, 190, 19, 184, 235,119, 79, 95, 41, 52, 49, 49, 158, 114, 192, 94, 193, 16, 147, 255, 166};
-
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
-    [TJRemoteClient setAppKey:appKey length:sizeof(appKey)];
-
     self.viewController = [[MainViewController alloc] init];
     return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
